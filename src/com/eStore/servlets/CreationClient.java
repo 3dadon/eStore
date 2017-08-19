@@ -15,5 +15,7 @@ public class CreationClient extends HttpServlet {
 
 		System.out.println("Entrée dans la servlet ...");
 		this.getServletContext().getRequestDispatcher("/creerClient.jsp").forward(req, resp);
+		
+		//modif
 	}
 }
