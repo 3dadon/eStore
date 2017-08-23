@@ -13,12 +13,6 @@
   <div class="wrapper">
 	<div class="container">
 		<h1>Welcome</h1>
-		
-		<form id="form" class="form" method="GET" action="connect">
-			<input type="text" placeholder="Username" name="userName">
-			<input type="password" placeholder="Password" name="password">
-			<input type="submit" id="login-button" value="login"/>
-		</form>
 	</div>
 	
 	<ul class="bg-bubbles">

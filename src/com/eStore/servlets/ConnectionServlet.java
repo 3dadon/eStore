@@ -1,6 +1,8 @@
 package com.eStore.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +16,23 @@ public class ConnectionServlet extends HttpServlet
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException
 	{
-		this.getServletContext().getRequestDispatcher("/connection.jsp").forward(req, resp);
+		String userName = req.getParameter("userName");
+		List<String> testUsers = new ArrayList<String>();
+		testUsers.add("test");
+		testUsers.add("BOURJADEAN");
+		
+		
+		//Juste pour les tests
+		if (userName != null && testUsers.contains(userName)) {
+			System.out.println("userName = "+userName);
+		}
+		
+		dispatch("/connection.jsp", req, resp);
+	}
+	
+	private void dispatch(String destinationFile, HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		this.getServletContext().getRequestDispatcher(destinationFile).forward(req, resp);
 	}
 
 }
