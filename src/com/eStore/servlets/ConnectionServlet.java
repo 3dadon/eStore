@@ -23,8 +23,8 @@ public class ConnectionServlet extends HttpServlet
 		
 		
 		//Juste pour les tests
-		if (userName != null && testUsers.contains(userName)) {
-			System.out.println("userName = "+userName);
+		if (userName != null && !testUsers.contains(userName)) {
+			req.setAttribute("connectionFailedError", "Connection failed !");
 		}
 		
 		dispatch("/connection.jsp", req, resp);

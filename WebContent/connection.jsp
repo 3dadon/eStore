@@ -12,7 +12,10 @@
 <body>
   <div class="wrapper">
 	<div class="container">
-		<h1>Welcome</h1>
+		<input type="hidden" id="userNameParam" value="${param.userName}"/>
+		<input type="hidden" id="connectionFailedError" value="${requestScope.connectionFailedError}"/>
+		
+		<h1 id="welcomeMsg"></h1>
 		
 		<form id="form" class="form" method="GET" action="connect">
 			<input type="text" placeholder="Username" name="userName">
